@@ -1,0 +1,10 @@
+module FS {
+  interface FileSystem {
+      long create(in string fileName);
+      long delete(in string fileName);
+      long copy(in string fileName, in string newFileName);
+      long write(in string fileName, in string text);
+      long read(in string fileName, out string text);
+      oneway void shutdown();
+    };
+};
